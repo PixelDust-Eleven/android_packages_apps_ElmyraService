@@ -50,6 +50,13 @@
     <string name="action_mute_name">Mute calls and notifications</string>
     <string name="action_flashlight_name">Turn flashlight on/off</string>
     <string name="action_screen_name">Turn screen on/off</string>
+    <string name="action_skip_track_name">Skip track</string>
+    <string name="action_previous_track_name">Previous track</string>
+    <string name="action_voice_search_name">Voice search</string>
+    <string name="action_volume_panel_name">Volume panel</string>
+    <string name="action_toggle_qs_panel_name">Toggle QS panel</string>
+    <string name="action_toggle_notifications_panel_name">Toggle notifications panel</string>
+    <string name="action_clear_all_notifications_name">Clear all notifications</string>
 
     <!-- Actions meta -->
     <string-array name="action_values" translatable="false">
@@ -60,6 +67,13 @@
         <item>mute</item>
         <item>flashlight</item>
         <item>screen</item>
+        <item>skip_track</item>
+        <item>previous_track</item>
+        <item>voice_search</item>
+        <item>volume_panel</item>
+        <item>toggle_qs_panel</item>
+        <item>toggle_notifications_panel</item>
+        <item>clear_all_notifications</item>
     </string-array>
     <string-array name="action_names" translatable="false">
         <item>@string/action_screenshot_name</item>
@@ -69,5 +83,12 @@
         <item>@string/action_mute_name</item>
         <item>@string/action_flashlight_name</item>
         <item>@string/action_screen_name</item>
+        <item>@string/action_skip_track_name</item>
+        <item>@string/action_previous_track_name</item>
+        <item>@string/action_voice_search_name</item>
+        <item>@string/action_volume_panel_name</item>
+        <item>@string/action_toggle_qs_panel_name</item>
+        <item>@string/action_toggle_notifications_panel_name</item>
+        <item>@string/action_clear_all_notifications_name</item>
     </string-array>
 </resources>

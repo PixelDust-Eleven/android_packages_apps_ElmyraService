@@ -67,7 +67,7 @@ class ElmyraService : Service(), SharedPreferences.OnSharedPreferenceChangeListe
     override fun onBind(intent: Intent?) = null
 
     override fun onCreate() {
-        vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        //vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
         prefs = getDePrefs()
 
         Log.i(TAG, "Initializing CHRE gesture")
@@ -98,6 +98,13 @@ class ElmyraService : Service(), SharedPreferences.OnSharedPreferenceChangeListe
             "mute" -> MuteAction(this)
             "flashlight" -> FlashlightAction(this)
             "screen" -> ScreenAction(this)
+            "skip_track" -> SkipTrackAction(this)
+            "previous_track" -> PreviousTrackAction(this)
+            "voice_search" -> VoiceSearchAction(this)
+            "volume_panel" -> VolumePanelAction(this)
+            "toggle_qs_panel" -> ToggleQsPanelAction(this)
+            "toggle_notifications_panel" -> ToggleNotificationsPanelAction(this)
+            "clear_all_notifications" -> ClearAllNotificationsAction(this)
 
             else -> DummyAction(this)
         }
@@ -199,7 +206,7 @@ class ElmyraService : Service(), SharedPreferences.OnSharedPreferenceChangeListe
         Log.i(TAG, "Gesture detected hostSuspended=${msg.hostSuspended} hapticConsumed=${msg.hapticConsumed}")
 
         if (action.canRun()) {
-            vibrator.vibrate(vibEdgeRelease)
+            //vibrator.vibrate(vibEdgeRelease)
             action.run()
             inGesture = false
         }
@@ -213,11 +220,11 @@ class ElmyraService : Service(), SharedPreferences.OnSharedPreferenceChangeListe
             if (action.canRun()) {
                 // Enter gesture and vibrate to indicate that
                 inGesture = true
-                vibrator.vibrate(vibEdgeSqueeze)
+                //vibrator.vibrate(vibEdgeSqueeze)
             } else {
                 val now = SystemClock.elapsedRealtime()
                 if (now - lastRejectTime >= REJECT_COOLDOWN_TIME) {
-                    vibrator.vibrate(vibReject)
+                    //vibrator.vibrate(vibReject)
                     lastRejectTime = now
                 }
             }

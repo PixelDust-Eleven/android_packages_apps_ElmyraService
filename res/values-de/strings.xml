@@ -38,4 +38,11 @@
     <string name="action_mute_name">Weckrufe, Timer und Anrufe stummschalten</string>
     <string name="action_flashlight_name">Taschenlampe ein-/ausschalten</string>
     <string name="action_screen_name">Bildschirm ein-/ausschalten</string>
+    <string name="action_skip_track_name">Zum nächsten Songtitel</string>
+    <string name="action_previous_track_name">Zum vorherigen Songtitel</string>
+    <string name="action_voice_search_name">Sprachsuche öffnen</string>
+    <string name="action_volume_panel_name">Toneinstellungen öffnen</string>
+    <string name="action_toggle_qs_panel_name">Schnelleinstellungen ein-/ausblenden</string>
+    <string name="action_toggle_notifications_panel_name">Benachrichtungen ein-/ausblenden</string>
+    <string name="action_clear_all_notifications_name">Alle Benachrichtungen schließen</string>
 </resources>

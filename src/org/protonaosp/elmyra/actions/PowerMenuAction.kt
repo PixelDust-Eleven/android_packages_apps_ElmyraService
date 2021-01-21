@@ -26,7 +26,7 @@ import com.android.internal.statusbar.IStatusBarService
 class PowerMenuAction(context: Context) : Action(context) {
     val service = IStatusBarService.Stub.asInterface(ServiceManager.getService(Context.STATUS_BAR_SERVICE))
 
-    override fun canRunWhenScreenOff() = false
+    override fun canRunWhenScreenOff() = true
 
     override fun run() {
         service.triggerElmyraAction("powermenu")

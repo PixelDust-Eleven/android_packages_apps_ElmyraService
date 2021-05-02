@@ -27,6 +27,7 @@ class MuteAction(context: Context) : Action(context) {
     val service = IStatusBarService.Stub.asInterface(ServiceManager.getService(Context.STATUS_BAR_SERVICE))
 
     override fun canRun() = context.resources.getBoolean(com.android.internal.R.bool.config_volumeHushGestureEnabled)
+    override fun canRunWhenScreenOff() = false
 
     override fun run() {
         service.triggerElmyraAction("mute")
